@@ -43,24 +43,33 @@
                         <span>Headsets</span>
                     </a>
                 </section>
+                
                 <nav>
                     <ul>
                         <li><a href="about.html">About us</a></li>
                         <li><a href="index.html#best-sellers-section">Best Sellers</a></li>
                         <li><a href="index.html#newsletter-section">Newsletter</a></li>
-                        <li class="menu-icon"><img src="images/menu_icon.png" ></li>
+                        <li class="menu-icon">
+                            <img src="images/menu_icon.webp">
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
         
         <section class="hero">
+            <picture>
+                <source
+                    srcset="images/Hero_Mobile.webp"
+                    media="(max-width: 576px)" 
+                >
+                <source
+                    srcset="images/Hero_Tablet.webp"
+                    media="(max-width: 960px)" 
+                >
+                <img src="images/Hero_Desktop.webp" alt="hero-img" />
+            </picture>
 
-            <img class="desktop" src="images/Hero_Desktop.webp">
-            <img class="mobile" src="images/Hero_Mobile.webp">
-            <img class="tablet" src="images/Hero_Tablet.webp">
-
-           
             <div class="hero-content">
                 <div class="container">
                     <h1>Discover our line of VR Headsets</h1>
