@@ -65,12 +65,24 @@ function displayProducts(products) {
 
 }
 
+window.onload = () => {
+    let status = 'idle';
+    let productSection = document.querySelector('#all-products');
+
+    window.onscroll = () => {
+        let position = productSection.getBoundingClientRect().top - (window.scrollY + window.innerHeight);
+
+        if(status == 'idle' && position <= 0) {
+            status = 'fetching';
+            loadProducts();
+
+            // Simulate heavy operation. It could be a complex price calculation.
+            for (let i = 0; i < 10000000; i++) {
+                const temp = Math.sqrt(i) * Math.sqrt(i);
+            }
+        }
+    }
+};
 
 
-loadProducts();
-
-// Simulate heavy operation. It could be a complex price calculation.
-for (let i = 0; i < 10000000; i++) {
-    const temp = Math.sqrt(i) * Math.sqrt(i);
-}
 
